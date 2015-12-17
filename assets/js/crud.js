@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$("#loading").hide();$("#editloading").hide();$("#error").hide();$("#editerror").hide();$("#del-success").hide();
 	var idData; //id_data for editing
+	var host = location.protocol + '//' + location.host + '/';
 	//default add form
 	$(".add").click(function(){
 		$("#jenis").val("");
@@ -21,7 +22,7 @@ $(document).ready(function(){
 		}else{
 			$("#error").hide();
 			$.ajax({
-				url:'data/insert',
+				url:host+'nbc_prediction/data/insert',
 				data:{jenis:jenis, daerah:daerah, harga:harga, jambuka:jambuka, laris:laris},
 				beforeSend:function(data){
 					$("#submit").hide();
@@ -38,7 +39,7 @@ $(document).ready(function(){
 	$(".edit").click(function(){
 		idData = $(this).attr('id');
 		$.ajax({
-			url:'data/display/'+idData,
+			url:host+'nbc_prediction/data/display/'+idData,
 			data:{send:true},
 			success:function(data){
 				$("#editjenis").val(data.jenis_makanan);
@@ -60,7 +61,7 @@ $(document).ready(function(){
 			$("#editerror").slideDown();
 		}else{
 			$.ajax({
-				url:'data/edit/'+idData,
+				url:host+'nbc_prediction/data/edit/'+idData,
 				data:{jenis:jenis, daerah:daerah, harga:harga, jambuka:jambuka, laris:laris},
 				beforeSend:function(data){
 					$("#editsubmit").hide();

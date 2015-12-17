@@ -13,7 +13,7 @@ $(document).ready(function(){
 		}else{
 			$("#nbcerror").hide();
 			$.ajax({
-				url:host+'/nbc/data/nbcPrediction',
+				url:host+'/nbc_prediction/data/nbcPrediction',
 				data:{jenis:jenis, daerah:daerah, harga:harga, jambuka:jambuka},
 				beforeSend:function(data){
 					$("#nbcsubmit").hide();
