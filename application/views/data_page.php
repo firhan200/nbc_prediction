@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div style="font-size:18pt;color:#1c1c1c;padding:20px;" align="center">
-			SISTEM PREDIKSI KELARISAN USAHA MAKANAN DI DAERAH TEMBALANG
+			SISTEM PREDIKSI KELARISAN USAHA MAKANAN DI DAERAH
 		</div>
 		<div class="divider">
 		</div>
