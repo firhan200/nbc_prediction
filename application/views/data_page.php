@@ -39,7 +39,7 @@
 						</tr>
 					</thead>
 					<tbody>
-					<?php foreach($query as $result){ ?>
+					<?php $no=1;foreach($query as $result){ ?>
 						<tr>
 							<td><?php echo $no; ?>.</td>
 							<td><?php echo htmlspecialchars($result->jenis_makanan); ?></td>

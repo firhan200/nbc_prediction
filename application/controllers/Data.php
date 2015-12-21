@@ -18,7 +18,6 @@ class Data extends CI_Controller {
 		$this->pagination->initialize($config); 
 		$data['halaman'] = $this->pagination->create_links();
 		$data['query'] = $this->Crud->readPaging('tb_data', null, 'id_data', 'DESC', $config['per_page'], $id);
-		$data['no'] = (($id/$config['per_page'])+1)*$config['per_page']-49;
 
 		$this->load->view('data_page', $data);
 	}
